@@ -1,0 +1,23 @@
+{
+  "name": "fastdoc",
+  "version": "1.0.0",
+  "description": "Student Management API - Practical",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "express",
+    "student-management",
+    "docker"
+  ],
+  "author": "Prince Kandari",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

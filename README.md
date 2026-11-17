@@ -176,7 +176,7 @@ docker exec -it fastdoc-builder npm install --production
 
 #### 4. Commit the container to create a new custom Docker image
 ```bash
-docker commit --change='CMD ["node", "app.js"]' fastdoc-builder fastdoc-image:1.0
+docker commit -c "WORKDIR /app" -c "CMD node app.js" fastdoc-builder fastdoc-image:latest
 ```
 
 #### 5. Stop and clean up the builder container
@@ -187,7 +187,7 @@ docker rm fastdoc-builder
 
 #### 6. Run a container from your newly committed image
 ```bash
-docker run -d --name fastdoc-running -p 3000:3000 fastdoc-image:1.0
+docker run -d --name fastdoc-app -p 3000:3000 fastdoc-image:latest
 ```
 
 #### 7. Verify the running container and API
@@ -195,9 +195,24 @@ docker run -d --name fastdoc-running -p 3000:3000 fastdoc-image:1.0
 # Check container status
 docker ps
 
-# Test the API endpoint
+# Check container logs
+docker logs fastdoc-app
+
+# Test the API endpoints
 curl http://localhost:3000/
 curl http://localhost:3000/students
+```
+
+#### 8. Stop / Restart the container when needed
+```bash
+# Stop container
+docker stop fastdoc-app
+
+# Start container again
+docker start fastdoc-app
+
+# Remove container
+docker rm -f fastdoc-app
 ```
 
 ---

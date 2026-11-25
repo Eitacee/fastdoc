@@ -1,5 +1,11 @@
 # fastdoc - Student Management API
 
+**Repository URL:** [https://github.com/Eitacee/fastdoc](https://github.com/Eitacee/fastdoc)  
+**Student Name:** Prince Kandari  
+- **SAP ID:** 590014595  
+
+> 🔗 **GitHub Repository:** [https://github.com/Eitacee/fastdoc](https://github.com/Eitacee/fastdoc)
+
 A lightweight RESTful Student Management API built with Node.js and Express, configured for both local development and containerization via a manual **`docker commit`** workflow.
 
 ---
